@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <section id="app">
+        <h1>{{ name }}</h1>
+        <hr>
+        <p>Age = {{ age }}</p>
+        <p>Age + 5 = {{ agePlusFive() }}</p>
+        <p>{{randomNumber()}}</p>
+        <div>
+            <img v-bind:src="image" alt="">
+        </div>
+        <input type="text" v-model="nameInput" placeholder="Your name..">
+        <input type="text" v-model="ageInput" placeholder="Your age..">
+        <button @click="submit">Submit</button>
+    </section>
+</body>
+    <script src="app.js"></script>
+</html>
